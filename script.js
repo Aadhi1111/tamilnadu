@@ -1,6 +1,7 @@
 async function get_data(){
     var res = await fetch("https://data.covid19india.org/v4/min/data.min.json");
     var res_data = await res.json();
+    var chennai_data = res_data.TN.districts.Chennai.total
     var div = document.createElement("div");
     div.className = "cards";
     div.innerHTML = `<div class="card border-primary mb-3" style="max-width: 18rem;">
